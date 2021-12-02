@@ -21,20 +21,17 @@ class HomeActivity : AppCompatActivity() {
             supportFragmentManager.findFragmentById(R.id.container_view_home) as NavHostFragment
 
         navController = navHostFragment.navController
-        
-        /*navController.addOnDestinationChangedListener { _, destination, _ ->
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
-                R.id.eventFragment2 -> {
-                    collapsing_appbar.visibility = View.GONE
-                }
-                R.id.forumFragment2 -> {
-                    collapsing_appbar.visibility = View.GONE
+                R.id.fragmentSideNavigation -> {
+                    bottom_nav.visibility = View.GONE
                 }
                 else -> {
-                    collapsing_appbar.visibility = View.VISIBLE
+                    bottom_nav.visibility = View.VISIBLE
                 }
             }
-        }*/
+        }
 
         bottom_nav.setupWithNavController(navController)
     }

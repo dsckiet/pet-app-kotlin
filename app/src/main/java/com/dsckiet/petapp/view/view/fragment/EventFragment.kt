@@ -13,6 +13,7 @@ import com.dsckiet.petapp.R
 import com.dsckiet.petapp.databinding.FragmentEventBinding
 import com.dsckiet.petapp.view.adapter.ChatsAdapter
 import com.dsckiet.petapp.view.sample.Chats
+import com.google.android.material.snackbar.Snackbar
 
 class EventFragment : Fragment() {
 
@@ -24,7 +25,7 @@ class EventFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentEventBinding.inflate(layoutInflater)
 
         return binding.root
@@ -58,6 +59,17 @@ class EventFragment : Fragment() {
 
         binding.eventFab.setOnClickListener {
             findNavController().navigate(R.id.action_eventFragment2_to_createEventFragment)
+        }
+
+        binding.eventCommonToolbar.toolbarSide.setOnClickListener {
+            findNavController().navigate(R.id.fragmentSideNavigation)
+        }
+
+        binding.eventCommonToolbar.toolbarSearch.setOnClickListener {
+            val snackBar: Snackbar =
+                Snackbar.make(it, "Get the search design", Snackbar.LENGTH_SHORT)
+            snackBar.animationMode = Snackbar.ANIMATION_MODE_SLIDE
+            snackBar.show()
         }
 
     }

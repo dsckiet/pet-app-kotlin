@@ -64,7 +64,15 @@
         android:id="@+id/userprofileFragment"
         android:name="com.dsckiet.petapp.view.view.fragment.UserprofileFragment"
         android:label="UserprofileFragment"
-        tools:layout="@layout/fragment_userprofile"/>
+        tools:layout="@layout/fragment_userprofile">
+        <action
+            android:id="@+id/action_userprofileFragment_to_homeFragment3"
+            app:destination="@id/homeFragment3"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
     <dialog
         android:id="@+id/homeSortFragment"
         android:name="com.dsckiet.petapp.view.view.fragment.HomeSortFragment"

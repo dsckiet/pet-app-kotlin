@@ -7,190 +7,194 @@
 
     </data>
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-
-        >
-
-        <ImageView
-            android:id="@+id/iv_signup2"
-            android:layout_width="168dp"
-            android:layout_height="177dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="30dp"
-            android:src="@drawable/signup2"
-            android:contentDescription="@string/description" />
-
-        <TextView
-            android:id="@+id/tv_aboutText"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:layout_below="@id/iv_signup2"
-            android:layout_marginStart="29dp"
-            android:layout_marginTop="5dp"
-            android:fontFamily="@font/poppins_medium"
-            android:text="@string/about_owner"
-            android:textColor="@color/black"
-            android:textSize="30sp" />
+        android:layout_height="match_parent">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/tv_aboutText">
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/tv_name"
-                android:layout_width="match_parent"
-                android:layout_height="23dp"
-                android:layout_marginStart="29dp"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/poppins_medium"
-                android:text="@string/name"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
-            <EditText
-                android:id="@+id/et_yourName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_name"
-                android:layout_marginHorizontal="25dp"
-                android:layout_marginTop="5dp"
-                android:hint="@string/your_name"
-                android:autofillHints="username"
-                android:inputType="textPersonName" />
-
-            <TextView
-                android:id="@+id/tv_username"
-                android:layout_width="match_parent"
-                android:layout_height="23dp"
-                android:layout_below="@id/et_yourName"
-                android:layout_marginStart="29dp"
-                android:layout_marginTop="18dp"
-                android:fontFamily="@font/poppins_medium"
-                android:text="@string/your_name"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
-            <EditText
-                android:id="@+id/et_username"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_username"
-                android:layout_marginHorizontal="25dp"
-                android:layout_marginTop="5dp"
-                android:hint="Choose a unique username"
-                tools:ignore="HardcodedText"
-                android:importantForAutofill="no"
-                android:inputType="textPersonName" />
-
-            <TextView
-                android:id="@+id/tv_email"
-                android:layout_width="match_parent"
-                android:layout_height="23dp"
-                android:layout_below="@id/et_username"
-                android:layout_marginStart="29dp"
-                android:layout_marginTop="18dp"
-                android:fontFamily="@font/poppins_medium"
-                android:text="@string/email"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
-            <EditText
-                android:id="@+id/et_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_email"
-                android:layout_marginHorizontal="25dp"
-                android:layout_marginTop="5dp"
-                android:hint="Your email id"
-                tools:ignore="HardcodedText"
-                android:importantForAutofill="no"
-                android:inputType="textEmailAddress" />
-
-            <TextView
-                android:id="@+id/tv_password"
-                android:layout_width="match_parent"
-                android:layout_height="23dp"
-                android:layout_below="@id/et_email"
-                android:layout_marginStart="29dp"
-                android:layout_marginTop="18dp"
-                android:fontFamily="@font/poppins_medium"
-                android:text="@string/password"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
-            <EditText
-                android:id="@+id/et_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_password"
-                android:layout_marginHorizontal="25dp"
-                android:layout_marginTop="5dp"
-                android:hint="Your email id"
-                android:autofillHints=""
-                android:inputType="textPassword"
-                tools:ignore="HardcodedText" />
-
-            <TextView
-                android:id="@+id/tv_cnfpassword"
-                android:layout_width="match_parent"
-                android:layout_height="23dp"
-                android:layout_below="@id/et_password"
-                android:layout_marginStart="29dp"
-                android:layout_marginTop="18dp"
-                android:fontFamily="@font/poppins_medium"
-                android:text="Confirm Password"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                tools:ignore="HardcodedText" />
-
-            <EditText
-                android:id="@+id/et_cnfpassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_cnfpassword"
-                android:layout_marginHorizontal="25dp"
-                android:layout_marginTop="5dp"
-                android:hint="Re Enter Password"
-                tools:ignore="HardcodedText,TextFields"
-                android:importantForAutofill="no" />
-
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/btn_next"
-                android:layout_width="130dp"
-                android:layout_height="50dp"
-                android:layout_below="@id/et_cnfpassword"
+            <ImageView
+                android:id="@+id/iv_signup2"
+                android:layout_width="168dp"
+                android:layout_height="177dp"
                 android:layout_alignParentEnd="true"
-                android:layout_marginHorizontal="25dp"
-                android:layout_marginTop="30dp"
-                app:cardBackgroundColor="#455A64"
-                app:cardCornerRadius="27dp">
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/signup2"
+                android:contentDescription="@string/description" />
 
-                <LinearLayout
+            <TextView
+                android:id="@+id/tv_aboutText"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@id/iv_signup2"
+                android:layout_marginStart="29dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/about_owner"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tv_aboutText">
+
+                <TextView
+                    android:id="@+id/tv_name"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center">
+                    android:layout_height="23dp"
+                    android:layout_marginStart="29dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/name"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
 
-                    <TextView
+                <EditText
+                    android:id="@+id/et_yourName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_name"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="@string/your_name"
+                    android:autofillHints="username"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/tv_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="23dp"
+                    android:layout_below="@id/et_yourName"
+                    android:layout_marginStart="29dp"
+                    android:layout_marginTop="18dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/username"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/et_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_username"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="Choose a unique username"
+                    tools:ignore="HardcodedText"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/tv_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="23dp"
+                    android:layout_below="@id/et_username"
+                    android:layout_marginStart="29dp"
+                    android:layout_marginTop="18dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/email"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_email"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="Your email id"
+                    tools:ignore="HardcodedText"
+                    android:importantForAutofill="no"
+                    android:inputType="textEmailAddress" />
+
+                <TextView
+                    android:id="@+id/tv_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="23dp"
+                    android:layout_below="@id/et_email"
+                    android:layout_marginStart="29dp"
+                    android:layout_marginTop="18dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/password"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_password"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="@string/password"
+                    android:autofillHints=""
+                    android:inputType="textPassword"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tv_cnfpassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="23dp"
+                    android:layout_below="@id/et_password"
+                    android:layout_marginStart="29dp"
+                    android:layout_marginTop="18dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Confirm Password"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/et_cnfpassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_cnfpassword"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="Re Enter Password"
+                    tools:ignore="HardcodedText,TextFields"
+                    android:importantForAutofill="no" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btn_next"
+                    android:layout_width="130dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/et_cnfpassword"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginTop="30dp"
+                    app:cardBackgroundColor="#455A64"
+                    app:cardCornerRadius="27dp">
+
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:fontFamily="@font/poppins_medium"
-                        android:gravity="center"
-                        android:text="Next"
-                        android:textColor="#FFFFFF"
-                        android:textSize="20sp"
-                        tools:ignore="HardcodedText" />
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center"
+                            android:text="Next"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp"
+                            tools:ignore="HardcodedText" />
 
 
-                </LinearLayout>
+                    </LinearLayout>
 
-            </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
+            </RelativeLayout>
         </RelativeLayout>
-    </RelativeLayout>
+
+    </ScrollView>
 </layout>

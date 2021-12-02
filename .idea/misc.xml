@@ -72,19 +72,32 @@
         <entry key="..\:/Users/reyyu/AndroidStudioProjects/pet-app-kotlin-1/app/src/main/res/menu/bottom_nav_menu.xml" value="0.18205128205128204" />
         <entry key="..\:/Users/reyyu/AndroidStudioProjects/pet-app-kotlin-1/app/src/main/res/menu/for_common_toolbar.xml" value="0.25" />
         <entry key="..\:/Users/reyyu/StudioProjects/pet-app-kotlin-1/app/src/main/res/drawable/corner_radius.xml" value="0.12697368421052632" />
+        <entry key="..\:/Users/reyyu/StudioProjects/pet-app-kotlin-1/app/src/main/res/drawable/ic_side_nav.xml" value="0.15833333333333333" />
+        <entry key="..\:/Users/reyyu/StudioProjects/pet-app-kotlin-1/app/src/main/res/layout/activity_home.xml" value="0.1" />
         <entry key="..\:/Users/reyyu/StudioProjects/pet-app-kotlin-1/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/reyyu/StudioProjects/pet-app-kotlin-1/app/src/main/res/layout/bottom_sheet_home_sort.xml" value="0.1" />
         <entry key="..\:/Users/reyyu/StudioProjects/pet-app-kotlin-1/app/src/main/res/layout/category_item.xml" value="0.375" />
         <entry key="..\:/Users/reyyu/StudioProjects/pet-app-kotlin-1/app/src/main/res/layout/chats_item.xml" value="0.125" />
+        <entry key="..\:/Users/reyyu/StudioProjects/pet-app-kotlin-1/app/src/main/res/layout/common_toolbar.xml" value="0.1" />
+        <entry key="..\:/Users/reyyu/StudioProjects/pet-app-kotlin-1/app/src/main/res/layout/fragment_create_event.xml" value="0.1" />
+        <entry key="..\:/Users/reyyu/StudioProjects/pet-app-kotlin-1/app/src/main/res/layout/fragment_event.xml" value="0.1" />
         <entry key="..\:/Users/reyyu/StudioProjects/pet-app-kotlin-1/app/src/main/res/layout/fragment_forum.xml" value="0.125" />
         <entry key="..\:/Users/reyyu/StudioProjects/pet-app-kotlin-1/app/src/main/res/layout/fragment_forum_chat.xml" value="0.1" />
         <entry key="..\:/Users/reyyu/StudioProjects/pet-app-kotlin-1/app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="..\:/Users/reyyu/StudioProjects/pet-app-kotlin-1/app/src/main/res/layout/fragment_home_sort.xml" value="0.1" />
         <entry key="..\:/Users/reyyu/StudioProjects/pet-app-kotlin-1/app/src/main/res/layout/fragment_login.xml" value="0.25" />
-        <entry key="..\:/Users/reyyu/StudioProjects/pet-app-kotlin-1/app/src/main/res/layout/fragment_side_nav.xml" value="0.375" />
-        <entry key="..\:/Users/reyyu/StudioProjects/pet-app-kotlin-1/app/src/main/res/layout/fragment_signup3.xml" value="0.1" />
+        <entry key="..\:/Users/reyyu/StudioProjects/pet-app-kotlin-1/app/src/main/res/layout/fragment_side_nav.xml" value="0.165" />
+        <entry key="..\:/Users/reyyu/StudioProjects/pet-app-kotlin-1/app/src/main/res/layout/fragment_sign_up4.xml" value="0.1" />
+        <entry key="..\:/Users/reyyu/StudioProjects/pet-app-kotlin-1/app/src/main/res/layout/fragment_sign_up5.xml" value="0.11" />
+        <entry key="..\:/Users/reyyu/StudioProjects/pet-app-kotlin-1/app/src/main/res/layout/fragment_sign_up6.xml" value="0.1" />
+        <entry key="..\:/Users/reyyu/StudioProjects/pet-app-kotlin-1/app/src/main/res/layout/fragment_signup2.xml" value="0.11" />
+        <entry key="..\:/Users/reyyu/StudioProjects/pet-app-kotlin-1/app/src/main/res/layout/fragment_signup3.xml" value="0.165" />
         <entry key="..\:/Users/reyyu/StudioProjects/pet-app-kotlin-1/app/src/main/res/layout/fragment_userprofile.xml" value="0.1" />
         <entry key="..\:/Users/reyyu/StudioProjects/pet-app-kotlin-1/app/src/main/res/layout/home_category_item.xml" value="0.1" />
+        <entry key="..\:/Users/reyyu/StudioProjects/pet-app-kotlin-1/app/src/main/res/layout/home_toolbar.xml" value="0.11" />
+        <entry key="..\:/Users/reyyu/StudioProjects/pet-app-kotlin-1/app/src/main/res/layout/pet_categories_group.xml" value="0.10869565217391304" />
         <entry key="..\:/Users/reyyu/StudioProjects/pet-app-kotlin-1/app/src/main/res/layout/pet_item.xml" value="0.1" />
+        <entry key="..\:/Users/reyyu/StudioProjects/pet-app-kotlin-1/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
         <entry key="..\:/Users/reyyu/StudioProjects/pet-app-kotlin/app/src/main/res/drawable/circle.xml" value="0.19794871794871796" />
         <entry key="..\:/Users/reyyu/StudioProjects/pet-app-kotlin/app/src/main/res/drawable/ic_logout.xml" value="0.19794871794871796" />
         <entry key="..\:/Users/reyyu/StudioProjects/pet-app-kotlin/app/src/main/res/drawable/ic_outlineButton.xml" value="0.1257328990228013" />

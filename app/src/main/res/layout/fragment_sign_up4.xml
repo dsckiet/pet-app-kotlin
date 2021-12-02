@@ -6,204 +6,209 @@
 
     </data>
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-
         android:layout_height="match_parent">
-
-        <ImageView
-            android:layout_width="277dp"
-            android:layout_height="255dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="30dp"
-            android:src="@drawable/leaves"
-            android:contentDescription="@string/description" />
-
-        <ImageView
-            android:id="@+id/iv_signup3"
-            android:layout_width="158dp"
-            android:layout_height="198dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="80dp"
-            android:src="@drawable/signup3"
-            android:contentDescription="@string/description" />
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/iv_signup3">
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/tv_yourpet"
-                android:layout_width="match_parent"
-                android:layout_height="54dp"
-                android:layout_marginStart="25dp"
-                android:fontFamily="@font/poppins_medium"
-                android:text="@string/your_pet"
-                android:textColor="@color/black"
-                android:textSize="36sp" />
-
-            <TextView
-                android:id="@+id/tv_buddy"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_below="@id/tv_yourpet"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/poppins_medium"
-                android:text="@string/buddy_name"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/et_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_buddy"
-                android:layout_marginHorizontal="25dp"
-                android:layout_marginTop="10dp"
-                android:hint="@string/pet_name"
-                android:importantForAutofill="no"
-                android:inputType="textPersonName" />
-
-            <TextView
-                android:id="@+id/tv_gender"
-                android:layout_width="75dp"
-                android:layout_height="30dp"
-                android:layout_below="@id/et_name"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/poppins_medium"
-                android:text="@string/gender"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
-
-            <RelativeLayout
-                android:id="@+id/btn_male"
-                android:layout_width="153dp"
-                android:layout_height="52dp"
-                android:layout_below="@id/tv_gender"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="153dp"
-                    android:layout_height="52dp"
-                    android:src="@drawable/rectangle2"
-                    android:contentDescription="@string/description" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="14dp"
-                    android:fontFamily="@font/poppins_medium"
-                    android:gravity="center"
-                    android:text="@string/male"
-                    android:textColor="#455A64"
-                    android:textSize="16sp" />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/btn_female"
-                android:layout_width="153dp"
-                android:layout_height="52dp"
-                android:layout_below="@id/tv_gender"
-                android:layout_marginStart="26dp"
-                android:layout_marginTop="20dp"
-                android:layout_toEndOf="@id/btn_male"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="153dp"
-                    android:layout_height="52dp"
-                    android:src="@drawable/rectangle2"
-                    android:contentDescription="@string/description" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="14dp"
-                    android:fontFamily="@font/poppins_medium"
-                    android:gravity="center"
-                    android:text="@string/female"
-                    android:textColor="#455A64"
-                    android:textSize="16sp" />
-
-            </RelativeLayout>
-
-            <TextView
-                android:id="@+id/tv_little"
-                android:layout_width="230dp"
-                android:layout_height="25dp"
-                android:layout_below="@id/btn_male"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/poppins_medium"
-                android:text="@string/pet_description"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
-
-            <TextView
-                android:layout_width="73dp"
-                android:layout_height="24dp"
-                android:layout_below="@id/btn_female"
-                android:layout_marginStart="36dp"
-                android:layout_marginTop="21dp"
-                android:layout_toEndOf="@id/tv_little"
-                android:text="@string/pet_40words_limit"
-                android:textColor="#BDBDBD"
-                android:textSize="16sp" />
-
-            <EditText
-                android:id="@+id/et_about"
-                android:layout_width="match_parent"
-                android:layout_height="142dp"
-                android:layout_below="@id/tv_little"
-                android:layout_marginHorizontal="25dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/custom_input"
-                android:gravity="top"
-                android:paddingStart="8dp"
-                android:paddingEnd="@dimen/dimen_0"
-                android:importantForAutofill="no"
-                android:inputType="textPersonName" />
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/btn_next"
-                android:layout_width="130dp"
-                android:layout_height="50dp"
-                android:layout_below="@id/et_about"
+            <ImageView
+                android:layout_width="277dp"
+                android:layout_height="255dp"
                 android:layout_alignParentEnd="true"
-                android:layout_marginHorizontal="25dp"
-                android:layout_marginTop="25dp"
-                app:cardBackgroundColor="#455A64"
-                app:cardCornerRadius="27dp">
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/leaves"
+                android:contentDescription="@string/description" />
 
-                <LinearLayout
+            <ImageView
+                android:id="@+id/iv_signup3"
+                android:layout_width="158dp"
+                android:layout_height="198dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="80dp"
+                android:src="@drawable/signup3"
+                android:contentDescription="@string/description" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/iv_signup3">
+
+                <TextView
+                    android:id="@+id/tv_yourpet"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center">
+                    android:layout_height="54dp"
+                    android:layout_marginStart="25dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/your_pet"
+                    android:textColor="@color/black"
+                    android:textSize="36sp" />
+
+                <TextView
+                    android:id="@+id/tv_buddy"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/tv_yourpet"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/buddy_name"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_buddy"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/pet_name"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/tv_gender"
+                    android:layout_width="75dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/et_name"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/gender"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <RelativeLayout
+                    android:id="@+id/btn_male"
+                    android:layout_width="153dp"
+                    android:layout_height="52dp"
+                    android:layout_below="@id/tv_gender"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="153dp"
+                        android:layout_height="52dp"
+                        android:src="@drawable/rectangle2"
+                        android:contentDescription="@string/description" />
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
                         android:fontFamily="@font/poppins_medium"
                         android:gravity="center"
-                        android:text="@string/next"
-                        android:textColor="#FFFFFF"
-                        android:textSize="20sp" />
+                        android:text="@string/male"
+                        android:textColor="#455A64"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_female"
+                    android:layout_width="153dp"
+                    android:layout_height="52dp"
+                    android:layout_below="@id/tv_gender"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toEndOf="@id/btn_male"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="153dp"
+                        android:layout_height="52dp"
+                        android:src="@drawable/rectangle2"
+                        android:contentDescription="@string/description" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:text="@string/female"
+                        android:textColor="#455A64"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_little"
+                    android:layout_width="230dp"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/btn_male"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/pet_description"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="73dp"
+                    android:layout_height="24dp"
+                    android:layout_below="@id/btn_female"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginTop="21dp"
+                    android:layout_toEndOf="@id/tv_little"
+                    android:text="@string/pet_40words_limit"
+                    android:textColor="#BDBDBD"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/et_about"
+                    android:layout_width="match_parent"
+                    android:layout_height="142dp"
+                    android:layout_below="@id/tv_little"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_input"
+                    android:gravity="top"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="@dimen/dimen_0"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btn_next"
+                    android:layout_width="130dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/et_about"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginTop="25dp"
+                    app:cardBackgroundColor="#455A64"
+                    app:cardCornerRadius="27dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center"
+                            android:text="@string/next"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp" />
 
 
-                </LinearLayout>
+                    </LinearLayout>
 
-            </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
 
         </RelativeLayout>
 
-
-    </RelativeLayout>
+    </ScrollView>
 
 </layout>

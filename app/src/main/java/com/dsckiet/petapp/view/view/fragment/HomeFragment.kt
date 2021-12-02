@@ -1,23 +1,21 @@
 package com.dsckiet.petapp.view.view.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.setupWithNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.dsckiet.petapp.R
 import com.dsckiet.petapp.databinding.FragmentHomeBinding
 import com.dsckiet.petapp.view.adapter.CategoriesRecyclerAdapter
 import com.dsckiet.petapp.view.adapter.ProfileRecyclerAdapter
-import com.dsckiet.petapp.view.data.CategoriesDataSource
 import com.dsckiet.petapp.view.data.PetProfileDataSource
-import kotlinx.android.synthetic.main.fragment_home.*
+import com.google.android.material.snackbar.Snackbar
 
 class HomeFragment : Fragment() {
 
@@ -46,8 +44,8 @@ class HomeFragment : Fragment() {
 
         recyclerView.apply {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-            profileAdapter= ProfileRecyclerAdapter(requireContext())
-            adapter=profileAdapter
+            profileAdapter = ProfileRecyclerAdapter(requireContext())
+            adapter = profileAdapter
         }
         val data2 = PetProfileDataSource.createDataSet()
         profileAdapter.submitList(data2)
@@ -66,7 +64,6 @@ class HomeFragment : Fragment() {
         categoryAdapter.submitcateg(data3)*/
 
 
-
         /*binding.IVLocation.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_userprofileFragment)
         }
@@ -74,6 +71,17 @@ class HomeFragment : Fragment() {
         binding.ivMenu.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_fragmentsidenav)
         }*/
+
+        binding.homeToolbar.homeToolbarSide.setOnClickListener {
+            findNavController().navigate(R.id.fragmentSideNavigation)
+        }
+
+        binding.homeToolbar.homeToolbarSearch.setOnClickListener {
+            val snackBar: Snackbar =
+                Snackbar.make(it, "Get the search design", Snackbar.LENGTH_SHORT)
+            snackBar.animationMode = Snackbar.ANIMATION_MODE_SLIDE
+            snackBar.show()
+        }
     }
 
     fun onSupportNavigateUp(): Boolean {

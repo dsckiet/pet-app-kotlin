@@ -82,7 +82,7 @@ class LoginFragment : Fragment() {
             }
         }
 
-        binding.tvNoAccnt.setOnClickListener {
+        binding.goToSignUp.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_signup2Fragment)
         }
     }

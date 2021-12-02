@@ -1,6 +1,7 @@
 package com.dsckiet.petapp.view.view.fragment
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,7 +16,9 @@ import com.dsckiet.petapp.view.adapter.ChatsAdapter
 import com.dsckiet.petapp.view.adapter.FeedsAdapter
 import com.dsckiet.petapp.view.sample.Chats
 import com.dsckiet.petapp.view.sample.Feeds
+import com.dsckiet.petapp.view.util.LocalKeyStorage
 import com.dsckiet.petapp.view.viewmodel.ViewModel
+import com.google.android.material.snackbar.Snackbar
 
 class ForumFragment : Fragment() {
 
@@ -39,6 +42,10 @@ class ForumFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val cookie = LocalKeyStorage(requireContext()).getValue(LocalKeyStorage.COOKIE).toString()
+
+        Log.d("cookie", "onViewCreated: $cookie")
+
         chatsStatic = Chats
         feedsStatic = Feeds
 
@@ -48,7 +55,7 @@ class ForumFragment : Fragment() {
 
         viewModel = ViewModelProvider(this).get(ViewModel::class.java)
         viewModel.chatsList()
-        viewModel.feedsList()
+        viewModel.feedsList(cookie = cookie)
 
         adapterChats = ChatsAdapter(requireContext())
 
@@ -76,6 +83,17 @@ class ForumFragment : Fragment() {
 
         binding.forumFab.setOnClickListener {
             findNavController().navigate(R.id.action_forumFragment2_to_newFeedFragment)
+        }
+
+        binding.forumCommonToolbar.toolbarSide.setOnClickListener {
+            findNavController().navigate(R.id.fragmentSideNavigation)
+        }
+
+        binding.forumCommonToolbar.toolbarSearch.setOnClickListener {
+            val snackBar: Snackbar =
+                Snackbar.make(it, "Get the search design", Snackbar.LENGTH_SHORT)
+            snackBar.animationMode = Snackbar.ANIMATION_MODE_SLIDE
+            snackBar.show()
         }
     }
 

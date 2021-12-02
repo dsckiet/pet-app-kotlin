@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import com.dsckiet.petapp.view.model.*
+import com.dsckiet.petapp.view.model.get.feeds.FeedsData
 import com.dsckiet.petapp.view.repository.Repository
 import retrofit2.Response
 
@@ -12,7 +13,7 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
     val registerData: LiveData<Response<RegisterResponse>>
     val loginData: LiveData<Response<LoginResponse>>
     val chatData: LiveData<ChatsItem>
-    val feedData: LiveData<FeedsItem>
+    val feedData: LiveData<FeedsData>
     val upcomingData: LiveData<ItemUpcoming>
     val recentData: LiveData<ItemRecent>
 
@@ -39,8 +40,8 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
         repository.getChatList()
     }
 
-    fun feedsList(){
-        repository.getFeedsList()
+    fun feedsList(cookie: String){
+        repository.getFeedsList(cookie)
     }
 
     fun upcomingList(){
