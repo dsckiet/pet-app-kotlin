@@ -4,6 +4,8 @@ import android.content.Context
 import android.util.Log
 import com.dsckiet.petapp.view.call.PetAPI.Companion.baseURL
 import com.dsckiet.petapp.view.util.InternetConnectivity
+import com.squareup.moshi.Moshi
+import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.Cache
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -12,8 +14,8 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
 object RetrofitInstance {
-    private const val cacheSize : Long = 50 * 1024 * 1024
-    fun getClient(context: Context): PetAPI{
+    private const val cacheSize: Long = 50 * 1024 * 1024
+    fun getClient(context: Context): PetAPI {
         val cache: Cache = Cache(context.cacheDir, cacheSize)
 
         val REWRITE_RESPONSE_INTERCEPTOR = Interceptor { chain ->
@@ -43,9 +45,13 @@ object RetrofitInstance {
             .addInterceptor(REWRITE_RESPONSE_INTERCEPTOR_OFFLINE)
             .build()
 
+        val moshi = Moshi.Builder()
+            .add(KotlinJsonAdapterFactory()).build()
+
+
         val retrofit by lazy {
             Retrofit.Builder()
-                .addConverterFactory(MoshiConverterFactory.create())
+                .addConverterFactory(MoshiConverterFactory.create(moshi))
                 .baseUrl(baseURL)
                 .client(okHttpClient)
                 .build()

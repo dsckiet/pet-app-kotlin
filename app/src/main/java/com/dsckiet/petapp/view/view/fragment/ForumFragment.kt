@@ -14,6 +14,7 @@ import com.dsckiet.petapp.R
 import com.dsckiet.petapp.databinding.FragmentForumBinding
 import com.dsckiet.petapp.view.adapter.ChatsAdapter
 import com.dsckiet.petapp.view.adapter.FeedsAdapter
+import com.dsckiet.petapp.view.model.get.feeds.FeedDataCheck
 import com.dsckiet.petapp.view.sample.Chats
 import com.dsckiet.petapp.view.sample.Feeds
 import com.dsckiet.petapp.view.util.LocalKeyStorage
@@ -55,16 +56,30 @@ class ForumFragment : Fragment() {
 
         viewModel = ViewModelProvider(this).get(ViewModel::class.java)
         viewModel.chatsList()
-        viewModel.feedsList(cookie = cookie)
+        viewModel.feedsList(cookie = "sessionid=$cookie")
+        Log.d("cookie", "onViewCreated: sessionid=$cookie")
 
         adapterChats = ChatsAdapter(requireContext())
 
         adapterFeeds = FeedsAdapter(requireContext())
 
-
         /*viewModel.chatData.observe(viewLifecycleOwner, {
             adapterChats.setData(it as ArrayList<ChatsItem>)
         })*/
+
+        viewModel.feedData.observe(viewLifecycleOwner, {
+            forumRecyclerView.adapter = adapterFeeds
+            adapterFeeds.setData(it.feeds as ArrayList<FeedDataCheck.Feed>)
+            binding.rgForum.setOnCheckedChangeListener { _, i ->
+                if (i == R.id.rb_chats) {
+                    forumRecyclerView.adapter = adapterChats
+                    adapterChats.setData(chatsStatic.getStaticChats())
+                } else if (i == R.id.rb_feeds) {
+                    forumRecyclerView.adapter = adapterFeeds
+                    adapterFeeds.setData(it.feeds as ArrayList<FeedDataCheck.Feed>)
+                }
+            }
+        })
 
         if (binding.rgForum.checkedRadioButtonId == (R.id.rb_chats)) {
             forumRecyclerView.adapter = adapterChats
@@ -77,7 +92,6 @@ class ForumFragment : Fragment() {
                 adapterChats.setData(chatsStatic.getStaticChats())
             } else if (i == R.id.rb_feeds) {
                 forumRecyclerView.adapter = adapterFeeds
-                adapterFeeds.setData(feedsStatic.getStaticFeeds())
             }
         }
 

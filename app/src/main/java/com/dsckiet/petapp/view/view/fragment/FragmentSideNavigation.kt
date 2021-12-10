@@ -6,16 +6,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.dsckiet.petapp.R
 import com.dsckiet.petapp.databinding.FragmentSideNavBinding
+import com.dsckiet.petapp.view.util.LocalKeyStorage
 import com.dsckiet.petapp.view.view.activity.MainActivity
+import com.dsckiet.petapp.view.viewmodel.ViewModel
 import com.google.android.material.snackbar.Snackbar
 
 
 class FragmentSideNavigation : Fragment() {
 
     private lateinit var binding: FragmentSideNavBinding
+    private lateinit var viewModel: ViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -29,6 +33,8 @@ class FragmentSideNavigation : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        viewModel = ViewModelProvider(this).get(ViewModel::class.java)
 
         binding.userPfp.setOnClickListener { }
 
@@ -73,16 +79,14 @@ class FragmentSideNavigation : Fragment() {
                 Snackbar.make(it, "Logged out", Snackbar.LENGTH_SHORT)
             snackBar.animationMode = Snackbar.ANIMATION_MODE_SLIDE
             snackBar.show()
+            val cookie = LocalKeyStorage(requireContext()).getValue(LocalKeyStorage.COOKIE).toString()
+            viewModel.getLogout("sessionid=$cookie")
             safeLogout()
-            TODO("create logout function")
         }
     }
 
-    private fun logout() {
-        safeLogout()
-    }
-
     private fun safeLogout() {
+        LocalKeyStorage(requireContext()).deleteValue(LocalKeyStorage.COOKIE).toString()
         val intent = Intent(this.requireContext(), MainActivity::class.java)
         startActivity(intent)
     }

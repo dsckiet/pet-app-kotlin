@@ -19,8 +19,8 @@
                 android:layout_height="255dp"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="30dp"
-                android:src="@drawable/leaves"
-                android:contentDescription="@string/description" />
+                android:contentDescription="@string/description"
+                android:src="@drawable/leaves" />
 
             <ImageView
                 android:id="@+id/iv_signup3"
@@ -29,8 +29,8 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="30dp"
                 android:layout_marginEnd="80dp"
-                android:src="@drawable/signup3"
-                android:contentDescription="@string/description" />
+                android:contentDescription="@string/description"
+                android:src="@drawable/signup3" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -82,66 +82,36 @@
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
-                <RelativeLayout
-                    android:id="@+id/btn_male"
-                    android:layout_width="153dp"
-                    android:layout_height="52dp"
+                <RadioGroup
+                    android:id="@+id/rg_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_below="@id/tv_gender"
-                    android:layout_marginStart="30dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginHorizontal="@dimen/dimen_24"
+                    android:layout_marginTop="@dimen/dimen_20"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:layout_width="153dp"
-                        android:layout_height="52dp"
-                        android:src="@drawable/rectangle2"
-                        android:contentDescription="@string/description" />
+                    <RadioButton
+                        android:id="@+id/rb_male"
+                        style="@style/RadioButtonSignup"
+                        android:button="@null"
+                        android:checked="false"
+                        android:text="@string/male" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="14dp"
-                        android:fontFamily="@font/poppins_medium"
-                        android:gravity="center"
-                        android:text="@string/male"
-                        android:textColor="#455A64"
-                        android:textSize="16sp" />
+                    <RadioButton
+                        android:id="@+id/rb_female"
+                        style="@style/RadioButtonSignup"
+                        android:button="@null"
+                        android:checked="false"
+                        android:text="@string/female" />
 
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/btn_female"
-                    android:layout_width="153dp"
-                    android:layout_height="52dp"
-                    android:layout_below="@id/tv_gender"
-                    android:layout_marginStart="26dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_toEndOf="@id/btn_male"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="153dp"
-                        android:layout_height="52dp"
-                        android:src="@drawable/rectangle2"
-                        android:contentDescription="@string/description" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="14dp"
-                        android:fontFamily="@font/poppins_medium"
-                        android:gravity="center"
-                        android:text="@string/female"
-                        android:textColor="#455A64"
-                        android:textSize="16sp" />
-
-                </RelativeLayout>
+                </RadioGroup>
 
                 <TextView
                     android:id="@+id/tv_little"
                     android:layout_width="230dp"
                     android:layout_height="25dp"
-                    android:layout_below="@id/btn_male"
+                    android:layout_below="@id/rg_gender"
                     android:layout_marginStart="25dp"
                     android:layout_marginTop="15dp"
                     android:fontFamily="@font/poppins_medium"
@@ -152,7 +122,7 @@
                 <TextView
                     android:layout_width="73dp"
                     android:layout_height="24dp"
-                    android:layout_below="@id/btn_female"
+                    android:layout_below="@id/rg_gender"
                     android:layout_marginStart="36dp"
                     android:layout_marginTop="21dp"
                     android:layout_toEndOf="@id/tv_little"
@@ -169,10 +139,10 @@
                     android:layout_marginTop="10dp"
                     android:background="@drawable/custom_input"
                     android:gravity="top"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="@dimen/dimen_0"
                     android:importantForAutofill="no"
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="@dimen/dimen_0" />
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_next"

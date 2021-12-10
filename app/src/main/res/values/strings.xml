@@ -17,6 +17,7 @@
     <string name="done">Done</string>
     <string name="myConnections">My Connections</string>
     <string name="homeLocation">Lucknow</string>
+    <string name="home">Home</string>
     <string name="feeds">Feeds</string>
     <string name="chats">Chats</string>
     <string name="description">Content Description</string>
@@ -33,6 +34,7 @@
     <string name="email_hint">Your email id</string>
     <string name="password">Password</string>
     <string name="forgot_password">Forgot password?</string>
+    <string name="forum">Forum</string>
     <string name="login_button">Login</string>
     <string name="create_account">Don\'t have an account?</string>
     <string name="signUp">Sign-Up</string>

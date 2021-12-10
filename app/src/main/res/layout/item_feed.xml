@@ -14,7 +14,8 @@
         <ImageView
             android:id="@+id/feed_image"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="350dp"
+            android:scaleType="centerCrop"
             android:src="@drawable/doggy"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

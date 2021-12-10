@@ -56,7 +56,7 @@ class SignUpUploadedFragment : Fragment() {
                     category = data.category,
                     description = data.description,
                     email = data.email,
-                    gender = "female",
+                    gender = data.gender,
                     name = data.name,
                     password = data.password,
                     petName = data.petName,
@@ -76,6 +76,10 @@ class SignUpUploadedFragment : Fragment() {
                     startActivity(intent)
                 } else {
                     val error = it.errorBody()
+                    findNavController().navigate(R.id.loginFragment)
+                    Toast.makeText(context, "Signup Failed", Toast.LENGTH_SHORT).show()
+                    Log.d(TAG, "onViewCreated: ${it.errorBody()}")
+                    Toast.makeText(context, "${error.toString()}", Toast.LENGTH_SHORT).show()
                     Log.d(TAG, "onViewCreated: ${error.toString()}")
                 }
             })

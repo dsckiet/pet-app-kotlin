@@ -6,99 +6,105 @@
 
     </data>
 
-    <ScrollView
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#E5E5E5">
 
-        <RelativeLayout
+        <TextView
+            android:id="@+id/tv_add"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#E5E5E5">
+            android:layout_height="54dp"
+            android:layout_marginTop="77dp"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:text="@string/add_image"
+            android:textColor="#455A64"
+            android:textSize="32sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/tv_add"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/iv_image"
+            android:layout_width="260dp"
+            android:layout_height="260dp"
+            android:layout_below="@id/tv_add"
+            android:layout_marginHorizontal="75dp"
+            android:layout_marginTop="65dp"
+            app:cardCornerRadius="130dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_add">
+
+            <ImageView
+                android:id="@+id/upload_img"
                 android:layout_width="match_parent"
-                android:layout_height="54dp"
-                android:layout_marginTop="77dp"
-                android:fontFamily="@font/poppins_medium"
-                android:gravity="center"
-                android:text="@string/add_image"
-                android:textColor="#455A64"
-                android:textSize="32sp" />
+                android:layout_height="match_parent"
+                android:contentDescription="@string/description" />
+        </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/iv_image"
-                android:layout_width="260dp"
-                android:layout_height="260dp"
-                android:layout_below="@id/tv_add"
-                android:layout_marginHorizontal="75dp"
-                android:layout_marginTop="65dp"
-                app:cardCornerRadius="130dp">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_next"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/iv_image"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginBottom="@dimen/dimen_32"
+            app:cardBackgroundColor="#455A64"
+            app:cardCornerRadius="27dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
-                <ImageView
-                    android:id="@+id/upload_img"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:contentDescription="@string/description" />
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/btn_next"
-                android:layout_width="130dp"
-                android:layout_height="50dp"
-                android:layout_below="@id/iv_image"
-                android:layout_alignParentEnd="true"
-                android:layout_marginHorizontal="30dp"
-                android:layout_marginTop="250dp"
-                app:cardBackgroundColor="#455A64"
-                app:cardCornerRadius="27dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:fontFamily="@font/poppins_medium"
-                        android:gravity="center"
-                        android:text="@string/upload"
-                        android:textColor="#FFFFFF"
-                        android:textSize="20sp" />
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <RelativeLayout
-                android:id="@+id/btn_male"
-                android:layout_width="130dp"
-                android:layout_height="50dp"
-                android:layout_below="@id/iv_image"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="250dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="153dp"
-                    android:layout_height="52dp"
-                    android:contentDescription="@string/description"
-                    android:src="@drawable/rectangle2" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_height="30dp"
                     android:fontFamily="@font/poppins_medium"
                     android:gravity="center"
-                    android:text="@string/click"
-                    android:textColor="#455A64"
+                    android:text="@string/upload"
+                    android:textColor="#FFFFFF"
                     android:textSize="20sp" />
+            </LinearLayout>
 
-            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:id="@+id/btn_male"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/iv_image"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="@dimen/dimen_32"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:layout_width="153dp"
+                android:layout_height="52dp"
+                android:contentDescription="@string/description"
+                android:src="@drawable/rectangle2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:text="@string/click"
+                android:textColor="#455A64"
+                android:textSize="20sp" />
 
         </RelativeLayout>
 
-    </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </layout>

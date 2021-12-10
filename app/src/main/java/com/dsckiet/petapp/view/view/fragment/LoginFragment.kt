@@ -31,7 +31,7 @@ class LoginFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false)
 
@@ -64,6 +64,7 @@ class LoginFragment : Fragment() {
                 binding.loginBtnText.visibility = TextView.GONE
                 binding.loginProgressBar.visibility = ProgressBar.VISIBLE
                 viewModel.postLogin(password, email)
+
                 viewModel.loginData.observe(viewLifecycleOwner, {
                     if (it.isSuccessful && it.code() == 200) {
                         val intent = Intent(activity, HomeActivity::class.java)
@@ -71,6 +72,9 @@ class LoginFragment : Fragment() {
                         activity?.finish()
                         binding.loginBtnText.visibility = TextView.VISIBLE
                         binding.loginProgressBar.visibility = ProgressBar.GONE
+                    } else if (it.code() != 200) {
+                        binding.loginProgressBar.visibility = ProgressBar.GONE
+                        binding.loginBtnText.visibility = TextView.VISIBLE
                     } else {
                         val errorBody = it.errorBody()
                         Log.d("LoginFragment", "onViewCreated: ${errorBody.toString()}")
@@ -78,12 +82,14 @@ class LoginFragment : Fragment() {
                         binding.loginBtnText.visibility = TextView.VISIBLE
                     }
                 })
-
             }
         }
 
         binding.goToSignUp.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_signup2Fragment)
+        }
+
+        binding.loginWithGoogle.setOnClickListener {
         }
     }
 }
